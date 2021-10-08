@@ -20,12 +20,12 @@ function App() {
 
   function handleSubmit(event) {
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(event);
-    event.preventDefault();
     if (event.target[0].defaultValue.length <= 0 || !re.test(event.target[0].defaultValue)){
+      event.preventDefault();
       setBorderEmail("2px solid #ff0000");
       setPEmail("❗ email must be in format abc@gmail.com")
     }else if (event.target[1].value.length < 8) {
+      event.preventDefault();
       setBorderPassword("2px solid #ff0000");
       setPPassword("❗ password must be of 8 characters")
     }
