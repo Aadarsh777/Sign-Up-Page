@@ -23,11 +23,11 @@ function App() {
     if (event.target[0].defaultValue.length <= 0 || !re.test(event.target[0].defaultValue)){
       event.preventDefault();
       setBorderEmail("2px solid #ff0000");
-      setPEmail("❗ email must be in format abc@gmail.com")
+      setPEmail("⚠️ email must be in format abc@gmail.com")
     }else if (event.target[1].value.length < 8) {
       event.preventDefault();
       setBorderPassword("2px solid #ff0000");
-      setPPassword("❗ password must be of 8 characters")
+      setPPassword("⚠️ password must be of 8 characters")
     }
   }
 
@@ -37,9 +37,9 @@ function App() {
         <h1 className="heading">SignUp Page</h1>
           <form onSubmit={handleSubmit} className="app_form">
             <input style={{border: borderEmail}} onChange={handleChange} className="app_input" type="text" placeholder="Email" value={email} />
-            <p className="invalid_email">{pEmail}</p>
+            <p className="invalid_msg">{pEmail}</p>
             <input style={{border: borderPassword}} onChange={handleChange2} className="app_input" type="password" placeholder="Password" value={password} />
-            <p className="invalid_password">{pPassword}</p>
+            <p className="invalid_msg">{pPassword}</p>
             <button className="app_button" type="submit">Submit</button>
           </form>
       </div>

@@ -43,3 +43,6 @@
    font-size: 1.1rem;
 }
 
+.invalid_msg {
+   color: red;
+}
